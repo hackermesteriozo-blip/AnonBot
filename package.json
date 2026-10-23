@@ -1,0 +1,14 @@
+{
+  "name": "anonbot-control",
+  "version": "1.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": { "start": "node index.js" },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.7.18",
+    "express": "^4.21.2",
+    "pino": "^9.6.0",
+    "qrcode": "^1.5.4"
+  }
+}

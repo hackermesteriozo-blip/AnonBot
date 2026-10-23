@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: anonbot-control
+    runtime: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    disk:
+      name: anonbot-session
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: AUTH_DIR
+        value: /var/data/auth
+      - key: ADMIN_TOKEN
+        sync: false

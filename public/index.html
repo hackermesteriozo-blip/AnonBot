@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090d18"><title>AnonBot Control</title><link rel="stylesheet" href="/style.css">
+</head>
+<body><main class="shell">
+<header><div class="logo">A<span>.</span></div><div><small>WHATSAPP AUTOMATION</small><h1>AnonBot <span>Control</span></h1></div><div id="badge" class="badge"><i></i><span id="status">OFFLINE</span></div></header>
+<section class="hero"><div><small>CENTRAL DE CONTROLE</small><h2>Seu bot.<br><em>Sua central.</em></h2><p>Conecte sua conta do WhatsApp e monitore a sessão em um só lugar.</p></div><div class="orb">A<span>N</span></div></section>
+<section class="panel"><small>01 / ACESSO SEGURO</small><h3>Autenticar painel</h3><label for="token">Token de administrador</label><input id="token" type="password" autocomplete="current-password" placeholder="Cole o ADMIN_TOKEN do Render"><button id="login" class="primary">Entrar no painel →</button><p class="hint">O token fica somente na memória desta página; não o compartilhe.</p></section>
+<section id="controls" class="panel hidden"><small>02 / VINCULAR DISPOSITIVO</small><h3>Conectar WhatsApp</h3><div class="tabs"><button class="tab active" data-mode="qr">QR Code</button><button class="tab" data-mode="pairing">Código de pareamento</button></div><p id="help">No WhatsApp, abra Dispositivos conectados → Conectar dispositivo e escaneie o QR.</p><div id="phoneWrap" class="hidden"><label for="phone">Número com DDI e DDD</label><input id="phone" inputmode="numeric" placeholder="5511999999999"></div><button id="connect" class="primary">Iniciar conexão →</button><div id="qrBox" class="qr hidden"><img id="qr" alt="QR Code WhatsApp"><p>Escaneie pelo WhatsApp da conta autorizada.</p></div><div id="codeBox" class="code hidden"><small>CÓDIGO DE PAREAMENTO</small><strong id="code">--------</strong><button id="copy" class="secondary">Copiar código</button></div><div class="actions"><button id="refresh" class="secondary">Atualizar status</button><button id="disconnect" class="danger">Desconectar</button></div><p id="notice" role="status"></p></section>
+<section id="monitor" class="panel hidden"><small>03 / MONITORAMENTO</small><h3>Estado do serviço</h3><div class="stats"><div><span>Conexão</span><b id="stat">OFFLINE</b></div><div><span>Método</span><b id="method">QR Code</b></div></div><p id="error" class="error"></p><button id="logout" class="danger">Apagar sessão e desvincular</button><p class="hint">Use somente se quiser fazer um novo pareamento.</p></section>
+<footer>ANONBOT CONTROL <span>Proteja seu token e sua sessão.</span></footer>
+</main><script src="/app.js" defer></script></body></html>
